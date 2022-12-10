@@ -1,0 +1,5 @@
+print "hello world!"
+print "hello world!"
+int i = 4;
+int j = 2;
+String str = "Hello";
