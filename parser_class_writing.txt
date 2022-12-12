@@ -1,0 +1,83 @@
+Down parsing (top) is basically when parser generates parse with top down expansion to the 1st element.
+tree construscts from top and input will read from left top right. (left most deviation)
+
+if you have something like baBdc
+and if you expand B -> b
+
+then your string = babdc
+
+
+Parser (LL) grammer
+
+second L is basically left to right deviation
+and first L is basically input is read from left to right
+
+Prs:
+   stmts --> stmt*  
+   pg" --> "("sq st")"  
+   sqs --> "("stmts")"  
+   stmt --> "(" {stateNull | assgn | cond | repeat | bk}")"  
+   st -->  "("prs")"  
+   prs -->  prs*  
+   pr --> "("id lt")"  
+   oper -->  "<=" | ">" | ">=" | "=" | "+" |"-" | "*" | "and" | "or" | "/" | "<" | "!=" 
+   stateNull --> "don"  
+   assignment --> "assgn" id exp
+   exp --> id | lt | "("opr exp exp")"    
+   cond --> "cond" exp Stmt Stmt  
+   repeat --> "loop" exp Stmt  
+   bk --> "block" Statements  
+   
+Tok:
+
+   stmts --> stmts Stmt | Stmt  
+   stmt --> stmtNull | assgn | cond | repeat | bk 
+   st -->  (prs)  
+   pg --> sq st  
+   sq --> (stmts)
+   prs --> prs pr | pr 
+   opr --> + | - | * | / | < | <= | > | >= | = | != | or | and  
+   pr --> (id lt)   
+   cond --> (cond exp Stmt Stmt)  
+   repeat --> (repeat exp Stmt)  
+   bk --> (bk stmts)
+   stmtNull --> (don)  
+   assgn --> (assign id exp)  
+   exp --> id | lt | (opr exp exp)  
+
+
+
+Scnr:
+
+
+   pg" --> "("sq st")"  
+   sq --> "("stmts")"   
+   st -->  "("prs")"
+   stmts --> stmts  stmt | e  
+   stmt --> "(" {stmtNull | assgn | cond | repeat | bk}")"   
+   prs -->  prs pr | e  
+   pr --> "("id lt")"  
+   stmtNull --> "don"
+   opr --> "+" |"-" | "*" | "/" | "or" | "and" | "<" | "<=" | ">" | ">=" | "=" | "!="  
+   assgn --> "assign" id exp  
+   cond --> "cond" exp stmt stmt
+   assgn --> "assign" id exp  
+   cond --> "cond" exp stmt stmt   
+   repeat --> "repeat" exp stmt  
+   bk --> "bk" stmts  
+   exp --> id | lt | "("opr exp exp")"  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
