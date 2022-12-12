@@ -5,7 +5,7 @@ Question D
 Definitions
 
 natural literal: 0 or whole number
-Token: value
+Token: it is the basic component of source code. Describe funsctions(operators, reserved words)
 lexer: basically means tokenize given string
 boolean: true || false
 character: ASCII character (escape character included)
@@ -14,9 +14,9 @@ greater than: basically a symbol if something is greater than something
 Equal to: if something is equal to something
 Not equal to: if something is not equal
 unary negation operator: negationg operator
-Logical Not: if not logical
+Logical Not: logical not operator takes truth to falsity and vice versa. Typically used with boolean values
 Symbol(s) of grouping code blocks: block code
-Logical And: and operator (logical)
-Logical Or: or operatopr (logical)
+Logical And: operands will be true if and only if all the operands are true
+Logical Or: operator for a set of operands is true if and only if one or more of its operands is true
 Parameter separator: to seperate parameter
 Variable/function identifier: identifier of vars
