@@ -1,0 +1,22 @@
+Lexer Class
+
+Question D 
+
+Definitions
+
+natural literal: 0 or whole number
+Token: value
+lexer: basically means tokenize given string
+boolean: true || false
+character: ASCII character (escape character included)
+keyword: basically reserved word (used for repeat or loop, declare of var) 
+greater than: basically a symbol if something is greater than something
+Equal to: if something is equal to something
+Not equal to: if something is not equal
+unary negation operator: negationg operator
+Logical Not: if not logical
+Symbol(s) of grouping code blocks: block code
+Logical And: and operator (logical)
+Logical Or: or operatopr (logical)
+Parameter separator: to seperate parameter
+Variable/function identifier: identifier of vars
